@@ -1,5 +1,8 @@
+CC = gcc
+CFLAGS = -Wall -Wextra
+
 main: main.c
-	gcc -Wall -Wextra -o main main.c
+	$(CC) $(CFLAGS) -o main main.c
 
 clean:
 	rm -f main
