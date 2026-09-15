@@ -4,6 +4,7 @@
 #include <ulimit.h>
 #include <sys/resource.h>
 #include <errno.h>   
+#include <limits.h>
 
 struct option_data
 {
@@ -172,7 +173,7 @@ int main(int argc, char *argv[])
 
         case 'd':
         {
-            char current_directory[512];
+            char current_directory[PATH_MAX];
 
             if (getcwd(current_directory, sizeof(current_directory)) == NULL)
             {
